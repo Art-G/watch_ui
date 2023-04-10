@@ -17,24 +17,31 @@ class ButtonScreen extends StatelessWidget {
         foregroundColor: Colors.black,
         shadowColor: Colors.transparent,
       ),
-      body: ListView(
+      body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 25),
-        children: [
-          const SizedBox(
-            height: 30,
+        child: SizedBox(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 30,
+              ),
+              const WText.headingTwo('Buttons'),
+              const SizedBox(height: 24),
+              // TODO: Add code example
+              ...buttonWidgets
+            ],
           ),
-          const BoxText.headingTwo('Card'),
-          const SizedBox(height: 24),
-          // TODO: Add code example
-          ...buttonWidgets
-        ],
+        ),
       ),
     );
   }
 }
 
 List<Widget> get buttonWidgets => [
-      SizedBox(width: 300, child: WButton(label: 'label', handler: () => {})),
+      WButton(label: 'label', handler: () => {}),
       const SizedBox(height: 24),
       WButton(
           label: 'label',

@@ -22,11 +22,10 @@ class CardScreen extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const BoxText.headingTwo('Card'),
+          const WText.headingTwo('Card'),
           const SizedBox(height: 24),
           // TODO: Add code example
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 20.0),
             height: 400,
             child: ListView(
               // physics: const PageScrollPhysics(),

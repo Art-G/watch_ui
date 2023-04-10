@@ -57,11 +57,17 @@ class Demo extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 25),
         children: [
           const Center(
-            child: BoxText.headingOne('Design System'),
+            child: WText.headingOne('Design System'),
           ),
-          const BoxText.headingTwo('Text Styles'),
+          const WText.headingTwo('Text Styles'),
           const SizedBox(height: 24),
-          const BoxText.headingTwo('Buttons'),
+          const WText.headingThree('Heading Three'),
+          const SizedBox(height: 24),
+          const WText.headline('Headline'),
+          const SizedBox(height: 24),
+          WText.body('Body Text that will be used for the general body'),
+          const SizedBox(height: 24),
+          const WText.headingTwo('Buttons'),
           const SizedBox(height: 24),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -71,7 +77,7 @@ class Demo extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 24),
-          const BoxText.headingTwo('Card'),
+          const WText.headingTwo('Card'),
           const SizedBox(height: 24),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,

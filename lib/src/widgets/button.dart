@@ -18,14 +18,16 @@ class WButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: handler,
-      style: ButtonStyle(
-        minimumSize: const MaterialStatePropertyAll(Size.fromHeight(40)),
-        foregroundColor:
-            MaterialStatePropertyAll<Color>(foregroundColor ?? Colors.black),
-        backgroundColor:
-            MaterialStatePropertyAll<Color>(backgroundColor ?? Colors.white),
+      style: ElevatedButton.styleFrom(
+        minimumSize: const Size.fromHeight(40),
+        foregroundColor: foregroundColor ?? Colors.black,
+        animationDuration: const Duration(milliseconds: 1000),
+        backgroundColor: backgroundColor ?? Colors.white,
+        shadowColor: foregroundColor ?? Colors.black,
       ),
-      child: Text(label),
+      child: Text(
+        label,
+      ),
     );
   }
 }
